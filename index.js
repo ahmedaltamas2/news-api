@@ -1,5 +1,7 @@
 const express = require('express');
 const authMiddleware = require('./authMiddleware'); 
+const jsonData = require('./data.json');
+
 const app = express();
 const port = 3000;
 
@@ -11,7 +13,9 @@ const books = [
   
   // GET request to fetch all books
   app.get('/api/books', authMiddleware,(req, res) => {
-    res.json(books);
+    // console.log("data");
+    res.json(jsonData);
+
   });
   
   // GET request to fetch a specific book by ID

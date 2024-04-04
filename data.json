@@ -1,0 +1,35 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "title": "WhatsApp down globally",
+        "date": "Thursday, 4 April, 2024",
+        "body": "Messaging app WhatsApp is down for several users across the globe. Downdetector, a website that tracks web outages, showed a spike in users attempting to use WhatsApp but facing an issue. Users facing the issue tweeted, \"Me checking X to confirm if WhatsApp is down,\" and \"WhatsApp is down for everybody, go breathe some fresh air.\""
+      },
+      {
+        "id": 2,
+        "title": "KKR record biggest win of IPL 2024, win 3 matches in a row",
+        "date": "Wednesday, 3 April, 2024",
+        "body": "KKR defeated DC by 106 runs on Wednesday to record the biggest win of IPL 2024. KKR put up a total of 272/7, the second-highest total in IPL history, and bowled DC out for 166 runs in 17.2 overs. KKR have now won three matches in a row in IPL 2024 and are placed on top of the points table."
+      },
+      {
+        "id": 3,
+        "title": "Apple announces new iPhone 15 with revolutionary features",
+        "date": "Friday, 5 April, 2024",
+        "body": "Apple has unveiled the latest addition to its iPhone lineup, the iPhone 15, featuring groundbreaking new technology. The iPhone 15 boasts an advanced AI-powered camera system, a foldable display, and seamless integration with Apple's ecosystem. Pre-orders for the iPhone 15 will begin next week, with the device expected to hit stores later this month."
+      },
+      {
+        "id": 4,
+        "title": "Scientists discover new species of dinosaur in Patagonia",
+        "date": "Saturday, 6 April, 2024",
+        "body": "A team of paleontologists has uncovered the fossilized remains of a new species of dinosaur in Patagonia, Argentina. The newly discovered dinosaur, named Patagotitan mayorum, is believed to be one of the largest dinosaurs to have ever walked the earth, measuring over 100 feet in length and weighing more than 70 tons."
+      },
+      {
+        "id": 5,
+        "title": "SpaceX successfully launches mission to Mars",
+        "date": "Sunday, 7 April, 2024",
+        "body": "SpaceX has successfully launched its first manned mission to Mars, marking a historic milestone in space exploration. The mission, dubbed Mars One, aims to establish a permanent human settlement on the red planet. The crew of four astronauts will spend the next several months traveling to Mars before beginning construction of the settlement."
+      }
+    ]
+  }
+  
