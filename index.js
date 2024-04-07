@@ -1,4 +1,5 @@
 const express = require('express');
+const puppeteer = require('puppeteer');
 const authMiddleware = require('./authMiddleware'); 
 const jsonData = require('./data.json');
 
@@ -17,6 +18,21 @@ const books = [
     res.json(jsonData);
 
   });
+
+
+ app.get('/api/ambition-box-link', authMiddleware,(async (req, res) => {
+  const { company_name } = req.query;
+
+  try {
+      const url = await pup(company_name);
+      res.send({ "url": url });
+  } catch (error) {
+      console.error('Error:', error);
+      res.status(500).send('Internal Server Error');
+  }
+    
+  })
+);
   
   // GET request to fetch a specific book by ID
   app.get('/api/books/:id', (req, res) => {
@@ -51,3 +67,27 @@ const books = [
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+ async function pup(company_name) {
+  try {
+    const browser = await puppeteer.launch({ headless: false });
+    const page = await browser.newPage();
+
+    await page.goto('https://www.ambitionbox.com/');
+    await page.setViewport({width: 1080, height: 1024});
+
+    // await page.waitForSelector('.ab-typeahead');
+    await page.type('.component-input', company_name);
+
+
+    const searchResultSelector = '.autocomplete-list';
+    await page.waitForSelector(searchResultSelector);
+    await page.click(searchResultSelector);
+
+    const currentURL = page.url();
+    await browser.close();
+    return currentURL;
+    
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
